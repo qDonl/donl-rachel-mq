@@ -20,6 +20,8 @@ public enum MQExceptionEnum implements CruxBaseAssert {
     MSG_SEND_ERROR(240721_002, "msg send error"),
     MSG_CANNOT_EMPTY(240721_003, "msg can not empty"),
     NOT_SUPPORT_OPTIONS(240721_004, "not support options"),
+    MQ_NAMESERVER_CANNOT_BE_NULL(240721_005, "nameserver cannot be null"),
+    MQ_PRODUCER_GROUP_CANNOT_BE_NULL(240721_005, "producer group cannot be null"),
     ;
 
     private final Integer code;

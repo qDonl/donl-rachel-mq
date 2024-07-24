@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.spring.autoconfigure.RocketMQProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -38,11 +39,13 @@ import java.util.Map;
 public class CruxMQAutoConfig {
 
     @Bean(value = "rocketProducer", destroyMethod = "release")
+    @ConditionalOnProperty(prefix = "rocketmq", value = {"name-server", "producer.group"})
     public CruxMQProducer rocketProducer(RocketMQProperties properties, MessageEncoder encoder) throws MQClientException {
         return new RocketProducer(properties, encoder);
     }
 
     @Bean(value = "rocketTxProducer", destroyMethod = "release")
+    @ConditionalOnProperty(prefix = "rocketmq", value = {"name-server", "producer.group"})
     public RocketTxProducer rocketTxProducer(RocketMQProperties properties, TransactionListenerDispatcher dispatcher, MessageEncoder encoder) throws MQClientException {
         return new RocketTxProducer(properties, dispatcher, encoder);
     }
