@@ -23,25 +23,21 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>top.donl.util</groupId>
             <artifactId>donl-rachel-util-common</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>top.donl.util</groupId>
             <artifactId>donl-rachel-util-ext</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>top.donl.util</groupId>
             <artifactId>donl-rachel-util-exception</artifactId>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
