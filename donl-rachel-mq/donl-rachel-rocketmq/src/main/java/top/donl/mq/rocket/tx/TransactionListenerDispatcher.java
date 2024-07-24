@@ -42,7 +42,7 @@ public class TransactionListenerDispatcher implements TransactionListener {
         this.decoder = decoder;
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings({"rawtypes", "unchecked"})
     @Override
     public LocalTransactionState executeLocalTransaction(Message msg, Object arg) {
         log.debug("local transaction execute {}", msg.getTransactionId());
@@ -58,7 +58,7 @@ public class TransactionListenerDispatcher implements TransactionListener {
         return bean.execute(obj, arg).rocketMQ();
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings({"rawtypes", "unchecked"})
     @Override
     public LocalTransactionState checkLocalTransaction(MessageExt msg) {
         log.debug("local transaction checker {}", msg.getMsgId());
