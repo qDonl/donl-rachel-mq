@@ -22,6 +22,7 @@ public enum MQExceptionEnum implements CruxBaseAssert {
     NOT_SUPPORT_OPTIONS(240721_004, "not support options"),
     MQ_NAMESERVER_CANNOT_BE_NULL(240721_005, "nameserver cannot be null"),
     MQ_PRODUCER_GROUP_CANNOT_BE_NULL(240721_005, "producer group cannot be null"),
+    CANNOT_FIND_MESSAGE_HANDLER(240721_006, "Cannot find message handler")
     ;
 
     private final Integer code;

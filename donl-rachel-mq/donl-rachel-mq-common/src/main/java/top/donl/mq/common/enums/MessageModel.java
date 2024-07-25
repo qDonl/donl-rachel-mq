@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * <p></p>
+ * <p>
+ *     消息模式
+ * </p>
  *
  * @author Crux
  */
